@@ -45,7 +45,9 @@ const admissionFormSchema = new mongoose.Schema({
         residentialStudent: { type: Boolean, default: false }, 
         nonResidentialStudent: { type: Boolean, default: false }, 
     },
-    //additionalInformation
+    additionalInformation: {
+        
+    },
     educationalBackground: {
         highSchoolAttended: {
             schoolName: { type: String },
@@ -131,6 +133,9 @@ const admissionFormSchema = new mongoose.Schema({
             //twoYears: { type: Boolean, default: false },
         },
     },
+    forOfficialUseOnly: {
+
+    }
     
 
 
