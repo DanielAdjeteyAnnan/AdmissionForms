@@ -51,6 +51,15 @@ const admissionFormSchema = new mongoose.Schema({
           type: String,
           required: function() { return this.hasDisability; } // Only required if hasDisability is true
         },
+
+        dismisalRecord:{type: Boolean, required: true },
+        dismissalDetails: {
+            institutionName: { type: String },
+            country: { type: String },
+            year: { type: Number },
+            reason: { type: String }
+          },
+
     },
     educationalBackground: {
         highSchoolAttended: {
