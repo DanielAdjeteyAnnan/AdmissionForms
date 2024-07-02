@@ -149,20 +149,7 @@ const admissionFormSchema = new mongoose.Schema({
             oneYear: { type: Boolean, default: false },
             //twoYears: { type: Boolean, default: false },
         },
-        
-      
-    },
-    forOfficialUseOnly: {
-
-    }
-    
-
-
-
-
-
-
-},
+    },},
 });
 
 module.exports = mongoose.model('AdmissionForm', admissionFormSchema);
