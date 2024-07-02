@@ -55,10 +55,14 @@ const admissionFormSchema = new mongoose.Schema({
         dismissalRecord:{type: Boolean, required: true },
         dismissalDetails: {
             institutionName: { type: String },
-            country: { type: String },
-            year: { type: Number },
-            reason: { type: String }
+            country: { type: String, trim: true },
+            year: { type: Number, trim: true },
+            reason: { type: String, trim: true }
           },
+        livingStatus: {
+            independentResidence: { type: Boolean, default: false },
+            familyResidence: { type: Boolean, default: false },
+        },
 
     },
     educationalBackground: {
