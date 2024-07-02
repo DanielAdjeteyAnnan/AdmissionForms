@@ -45,7 +45,7 @@ const admissionFormSchema = new mongoose.Schema({
         residentialStudent: { type: String },
         nonResidentialStudent: { type: String },
     },
-    
+    //bravo
 },);
 
 module.exports = mongoose.model('AdmissionForm', admissionFormSchema);
