@@ -45,6 +45,7 @@ const admissionFormSchema = new mongoose.Schema({
         residentialStudent: { type: String },
         nonResidentialStudent: { type: String },
     },
+    //this is the day the lord has made
     
 },);
 
