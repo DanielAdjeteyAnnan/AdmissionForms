@@ -46,7 +46,11 @@ const admissionFormSchema = new mongoose.Schema({
         nonResidentialStudent: { type: Boolean, default: false }, 
     },
     additionalInformation: {
-        
+        hasDisability: { type: Boolean, required: true },
+        disabilityDetails: { 
+          type: String,
+          required: function() { return this.hasDisability; } // Only required if hasDisability is true
+        },
     },
     educationalBackground: {
         highSchoolAttended: {
@@ -132,11 +136,7 @@ const admissionFormSchema = new mongoose.Schema({
             oneYear: { type: Boolean, default: false },
             //twoYears: { type: Boolean, default: false },
         },
-        hasDisability: { type: Boolean, required: true },
-        disabilityDetails: { 
-          type: String,
-          required: function() { return this.hasDisability; } // Only required if hasDisability is true
-        },
+        
       
     },
     forOfficialUseOnly: {
