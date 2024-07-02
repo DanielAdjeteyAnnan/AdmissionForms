@@ -45,7 +45,7 @@ const admissionFormSchema = new mongoose.Schema({
         residentialStudent: { type: String },
         nonResidentialStudent: { type: String },
     },
-    //<button type="button" onclick="getSelectedRadioValue()">Submit</button>.nbc
+    
 },);
 
 module.exports = mongoose.model('AdmissionForm', admissionFormSchema);
